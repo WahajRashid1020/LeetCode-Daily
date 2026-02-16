@@ -148,3 +148,22 @@
 
 // Correct index = value - 1
 // Place it there.
+
+function firstMissing(n) {
+  let i = 0;
+  let res = [];
+  while (i < n.length) {
+    let index = n[i] - 1;
+    if (n[i] > 0 && n[i] !== n[index] && n[i] <= n.length) {
+      [n[i], n[index]] = [n[index], n[i]];
+    } else {
+      i++;
+    }
+  }
+  console.log("sorted");
+  for (let i = 0; i < n.length; i++) {
+    if (n[i] !== i + 1) res.push(i + 1);
+  }
+  return res;
+}
+console.log(firstMissing([6, 1, -2, -3, 4, 5]));

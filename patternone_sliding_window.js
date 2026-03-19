@@ -119,6 +119,7 @@
 //     for(let i =0 ; i< k;i++){
 //         windowSum += nums[i]
 //     }
+// 2,3,4,5 2
 //     maxSum = windowSum
 //     for(let i = k ; i < n ;i++){
 //         windowSum += nums[i] - nums[i- k]
